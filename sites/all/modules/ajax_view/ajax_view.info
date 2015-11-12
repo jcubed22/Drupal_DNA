@@ -1,0 +1,5 @@
+name = AJAX Display
+description = Makes links from the AJAX View block display without page reload.
+package = Custom Modules
+core = 7.x
+files[] = ajax_view.module
