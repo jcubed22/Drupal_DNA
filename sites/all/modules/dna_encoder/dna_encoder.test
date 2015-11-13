@@ -11,7 +11,7 @@
       );
     }
     /* A->T  C->G */
-    function testEncode() {
+    function testEncodeDna() {
       //English description
       //displays desired result during test
       $description = 'User input "A" should return "T"';
@@ -22,7 +22,7 @@
 
       //Act
       //run the function we're testing with input and store output in $result
-      $result = encode($input);
+      $result = encode_dna($input);
 
       //Assert
       $expected_output = 'T';

@@ -1,0 +1,7 @@
+<?php
+
+  function encode_dna($input) {
+    if($input === 'A') {
+      return 'T';
+    }
+  }
