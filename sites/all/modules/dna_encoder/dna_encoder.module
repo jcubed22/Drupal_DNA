@@ -1,7 +1,9 @@
 <?php
 
   function encode_dna($input) {
-    if($input === 'A') {
+    if ($input === 'A') {
       return 'T';
+    } elseif ($input === 'T') {
+      return 'A';
     }
   }

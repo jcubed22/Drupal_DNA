@@ -27,6 +27,13 @@
       //Assert
       $expected_output = 'T';
       $this->assertEqual($result, $expected_output, $description);
+
+      //Second test
+      $description = 'User input "T" should return "A"';
+      $input = 'T';
+      $result = encode_dna($input);
+      $expected_output = 'A';
+      $this->assertEqual($result, $expected_output, $description);
     }
 
 
