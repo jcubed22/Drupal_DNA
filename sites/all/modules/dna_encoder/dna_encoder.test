@@ -1,0 +1,34 @@
+<?php
+
+  class DNAEncoderTestCase extends DrupalUnitTestCase {
+
+    public static function getInfo() {
+      //just returns information about the tests in this class.
+      return array(
+        'name' => 'DNA Encoder Unit Tests',
+        'description' => 'Test that DNA Encoder works properly.'
+        'group' => 'Code Review Tests',
+      );
+    }
+    /* A->T  C->G */
+    function testEncode() {
+      //English description
+      //displays desired result during test
+      $description = 'User input "A" should return "T"'
+
+      //Arrange
+      //create input
+      $input = 'A';
+
+      //Act
+      //run the function we're testing with input and store output in $result
+      $result = encode($input);
+
+      //Assert
+      $expected_output = 'T';
+      $this->assertEqual($result, $expected_output, $description);
+    }
+
+
+
+  }

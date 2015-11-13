@@ -1,0 +1,7 @@
+name = DNA Encoder
+description = Input a sequence of nucleotides, and this module will return the second half of the double helix!
+package = Custom Modules
+core = 7.x
+files[] = dna_encoder.module
+files[] = dna_encoder.test
+dependencies[] = simpletest
