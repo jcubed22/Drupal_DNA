@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the AJAX View and Content feature.
- */
-
-include_once 'ajax_view_and_content.features.inc';
