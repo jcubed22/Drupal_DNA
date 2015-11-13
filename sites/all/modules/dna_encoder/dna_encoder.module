@@ -5,5 +5,9 @@
       return 'T';
     } elseif ($input === 'T') {
       return 'A';
+    } elseif ($input === 'C') {
+      return 'G';
+    } elseif ($input === 'G') {
+      return 'C';
     }
   }
