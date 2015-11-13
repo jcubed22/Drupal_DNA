@@ -6,7 +6,7 @@
       //just returns information about the tests in this class.
       return array(
         'name' => 'DNA Encoder Unit Tests',
-        'description' => 'Test that DNA Encoder works properly.'
+        'description' => 'Test that DNA Encoder works properly.',
         'group' => 'Code Review Tests',
       );
     }
@@ -14,7 +14,7 @@
     function testEncode() {
       //English description
       //displays desired result during test
-      $description = 'User input "A" should return "T"'
+      $description = 'User input "A" should return "T"';
 
       //Arrange
       //create input
