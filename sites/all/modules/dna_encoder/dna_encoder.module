@@ -1,5 +1,38 @@
 <?php
 
+  function dna_encoder_menu() {
+    $items = array();
+    $items['dna_encoder'] = array(
+      'title' => 'DNA Encoder',
+      'page callback' => 'drupal_get_form',
+      'page arguments' => array('dna_encoder_form'),
+      'access callback' => TRUE,
+      'type' => MENU_NORMAL_ITEM,
+    );
+    $items['dna_encoder_success'] = array(
+      'title' => 'Encoded DNA',
+      'page callback' => 'encode_success',
+      'access callback' => TRUE,
+      'type' => MENU_CALLBACK,
+    );
+    return $items;
+  }
+
+  function dna_encoder_form() {
+    $form['input_string'] = array(
+      '#title' => 'Nucleotide Sequence',
+      '#type' => 'textfield',
+      '#description' => t('Input one half a double helix to find the nucleotide pairs.'),
+      '#required' => TRUE,
+      '#element_validate' => array('dna_encoder_validate_sequence'),
+    );
+    $form['submit'] = array(
+      '#type' => 'submit',
+      '#value' => 'Encode DNA',
+    );
+    return $form;
+  }
+
   function encode_dna($input) {
     $strlen = strlen($input);
     $output = '';
