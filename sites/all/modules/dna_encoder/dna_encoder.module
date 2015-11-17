@@ -9,9 +9,9 @@
       'access callback' => TRUE,
       'type' => MENU_NORMAL_ITEM,
     );
-    $items['dna_encoder_success'] = array(
+    $items['dna_encoder_success_page'] = array(
       'title' => 'Encoded DNA',
-      'page callback' => 'encode_success',
+      'page callback' => 'dna_encoder_success',
       'access callback' => TRUE,
       'type' => MENU_CALLBACK,
     );
@@ -56,4 +56,20 @@
       }
     }
     return $output;
+  }
+
+  function dna_encoder_form_submit($form, &$form_state) {
+    /* Get input values from form */
+    $input = strtoupper(rtrim($form_state['values']['input_string']));
+
+    $_SESSION['input_sequence'] = $input;
+    $_SESSION['output_sequence'] = encode_dna($input);
+    $form_state['redirect'] = 'dna_encoder_success_page';
+  }
+
+  function dna_encoder_success() {
+    $input = $_SESSION['input_sequence'];
+    $output = $_SESSION['output_sequence'];
+    return "<p>$input</p>" .
+           "<p>$output</p>";
   }
