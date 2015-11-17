@@ -48,8 +48,19 @@
       $result = encode_dna($input);
       $expected_output = 'C';
       $this->assertEqual($result, $expected_output, $description);
+
+      //Fifth test
+      $description = 'User input "AA" should return "TT"';
+      $input = 'AA';
+      $result = encode_dna($input);
+      $expected_output = 'TT';
+      $this->assertEqual($result, $expected_output, $description);
+
+      //Sixth test
+      $description = 'User input "GCTA" sould return "CGAT"';
+      $input = 'GCTA';
+      $result = encode_dna($input);
+      $expected_output = 'CGAT';
+      $this->assertEqual($result, $expected_output, $description);
     }
-
-
-
   }

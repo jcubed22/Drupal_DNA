@@ -1,13 +1,19 @@
 <?php
 
   function encode_dna($input) {
-    if ($input === 'A') {
-      return 'T';
-    } elseif ($input === 'T') {
-      return 'A';
-    } elseif ($input === 'C') {
-      return 'G';
-    } elseif ($input === 'G') {
-      return 'C';
+    $strlen = strlen($input);
+    $output = '';
+    for ($i = 0; $i <= $strlen; $i++) {
+      $char = substr($input, $i, 1);
+      if ($char === 'A') {
+        $output .= 'T';
+      } elseif ($char === 'T') {
+        $output .= 'A';
+      } elseif ($char === 'C') {
+        $output .= 'G';
+      } elseif ($char === 'G') {
+        $output .= 'C';
+      }
     }
+    return $output;
   }
