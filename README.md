@@ -26,7 +26,7 @@ Do the same as above, but through WAMP, or whatever server you're using._
 
 * _Database Information:_<br>
 Database name: dna\_database<br>
-_Database user: admin_<br>
+_Database user: dna_admin_<br>
 _Password: epicodus_
 
 * _Site admin account information_<br>
