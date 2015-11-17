@@ -79,6 +79,12 @@
     }
 
     public function setUp() {
-      parent::setUp(array())
+      parent::setUp(array('dna_encoder'));
+    }
+
+    public function testEncode() {
+      $data['input_string'] = 'GTCGA';
+      $this->drupalPost('dna_encoder', $data, 'Encode DNA');
+      $this->assertText('CAGCT', 'Success!');
     }
   }

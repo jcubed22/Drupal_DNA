@@ -70,6 +70,6 @@
   function dna_encoder_success() {
     $input = $_SESSION['input_sequence'];
     $output = $_SESSION['output_sequence'];
-    return "<p>$input</p>" .
-           "<p>$output</p>";
+    return "<p>$input - Your inputted sequence.</p>" .
+           "<p>$output - Matching nucleotide sequence.</p>";
   }
