@@ -1,5 +1,8 @@
 <?php
-
+/**
+* @file
+* Tests for the DNA Encoder module.
+*/
   class DNAEncoderTestCase extends DrupalUnitTestCase {
 
     public static function getInfo() {
@@ -62,5 +65,20 @@
       $result = encode_dna($input);
       $expected_output = 'CGAT';
       $this->assertEqual($result, $expected_output, $description);
+    }
+  }
+
+  class DNAEncoderTest extends DrupalWebTestCase {
+
+    public static function getInfo() {
+      return array(
+        'name' => 'DNA Encoder Functional Tests',
+        'description' => 'Tests for the DNA Encoder module.',
+        'group' => 'Code Review Tests',
+      );
+    }
+
+    public function setUp() {
+      parent::setUp(array())
     }
   }
