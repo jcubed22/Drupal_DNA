@@ -33,6 +33,13 @@
     return $form;
   }
 
+  function dna_encoder_validate_sequence($element) {
+    $input = strtoupper(rtrim($element['#value'], " "));
+    if(preg_match_all("/[^GCTA]/", $input)) {
+      form_error($element, t('Please only input a valid nucleotide sequence using G, C, T, and A.'));
+    }
+  }
+
   function encode_dna($input) {
     $strlen = strlen($input);
     $output = '';
